@@ -3,8 +3,11 @@ run-name: ${{ github.actor }} is testing out the Ansible Runner 🚀
 on: [push]
 jobs:
   Ansible-Runner:
-    runs-on: node-latest
-    steps: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Node
+      - run: npm install -g npm@latest
       - uses: actions/checkout@v2
       - name: Actions checkout v2 run ansible
-        run: ansible-playbook play-azure.yaml
+        run: ansible-playbook play-azure.yaml:w!
+
