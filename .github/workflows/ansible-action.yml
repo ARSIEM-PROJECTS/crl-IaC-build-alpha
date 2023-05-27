@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is testing out the Ansible Runner 🚀
 on: [push]
 jobs:
   Ansible-Runner:
-    runs-on: ubuntu-latest
+    runs-on: node-latest
     steps: 
       - uses: actions/checkout@v2
       - name: Actions checkout v2 run ansible
