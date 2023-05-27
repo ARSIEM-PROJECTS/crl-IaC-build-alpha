@@ -2,17 +2,12 @@ name: Ansible runner via Github Action
 run-name: ${{ github.actor }} is testing out the Ansible Runner 🚀
 on: [push]
 jobs:
-  Ansible-Runner:
+  Update-Node:
     runs-on: ubuntu-latest
     steps:
-      - name: Update Node
-        uses: actions/checkout@v3
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-        run: npm ci
-        run: npm test
-      - name: Actions checkout v2 run ansible
-        uses: actions/checkout@v2
-        run: ansible-playbook play-azure.yaml
-
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - run: npm ci
+    - run: npm test
