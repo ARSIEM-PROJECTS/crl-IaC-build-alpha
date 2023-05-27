@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Update ubuntu-latest
-        run: apt update && apt upgrade
+        run: sudo apt update && sudo apt upgrade
