@@ -1,0 +1,9 @@
+name: Ansible runner via Github Action
+run-name: ${{ github.actor }} is testing out the Ansible Runner 🚀
+on: [push]
+jobs:
+  Ansible Runner Install:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Update ubuntu-latest
+        run: apt update && apt upgrade
