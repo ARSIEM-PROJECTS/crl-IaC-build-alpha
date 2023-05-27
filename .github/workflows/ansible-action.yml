@@ -2,8 +2,9 @@ name: Ansible runner via Github Action
 run-name: ${{ github.actor }} is testing out the Ansible Runner 🚀
 on: [push]
 jobs:
-  Ansible-Runner-Install:
+  Ansible-Runner:
     runs-on: ubuntu-latest
     steps: 
-      - name: Update ubuntu-latest
-        run: sudo apt update && sudo apt upgrade
+      - uses: actions/checkout@v2
+      - name: Actions checkout v2 run ansible
+        run: ansible-playbook play-azure.yaml
