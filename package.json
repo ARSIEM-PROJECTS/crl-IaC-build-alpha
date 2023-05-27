@@ -1,0 +1,12 @@
+{
+  "name": "crl-iac-build-alpha",
+  "version": "1.0.0",
+  "description": "First attempt to use Terraform to use IaC to build full cyber range from scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
