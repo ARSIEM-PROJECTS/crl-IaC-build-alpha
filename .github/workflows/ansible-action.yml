@@ -5,7 +5,6 @@ jobs:
   Update-Node:
     runs-on: ubuntu-latest
     steps:
-      - name: Node Install
         uses: actions/checkout@v3
         uses: actions/setup-node@v3
         with:
