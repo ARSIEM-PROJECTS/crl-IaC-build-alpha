@@ -9,4 +9,4 @@ jobs:
     - name: Perform ansible playbook to deploy
       uses: actions-ansible@v2
       with:
-        playbook: ./playbooks/playbook.yml
+        playbook: /playbooks/playbook.yml
