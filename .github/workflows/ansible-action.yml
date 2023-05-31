@@ -13,12 +13,8 @@ jobs:
           node-version: 18
       - run: npm install
       - run: npm ci --force
-      - name: apt update
       - run: sudo apt update
-      - name: software-properties-common install
       - run: sudo apt install software-properties-common
-      - name: PPA repo add 
       - run: sudo add-apt-repository --yes --update ppa:ansible/Ansible
-      - name: ansible install
       - run: sudo apt install ansible
 
