@@ -1,0 +1,12 @@
+on: push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Check out repository code
+      uses: actions/checkout@v2
+    - name: Perform ansible playbook to deploy
+      uses: actions-ansible@v2
+      with:
+        playbook: ./playbooks/playbook.yml
