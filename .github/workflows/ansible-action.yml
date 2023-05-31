@@ -1,5 +1,5 @@
 name: Ansible runner via Github Action
-run-name: ${{ github.actor }} is testing out the Ansible Runner 🚀
+run-name: ${{ github.actor }} is starting the Ansible Runner 🚀
 on: [push]
 jobs:
   Update-Node:
@@ -17,4 +17,7 @@ jobs:
       - run: sudo apt install software-properties-common
       - run: sudo add-apt-repository --yes --update ppa:ansible/ansible
       - run: sudo apt install ansible
+      - name: List files in the repository
+      - run: |
+          ls ${{ github.workspace }}
 
