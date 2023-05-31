@@ -2,17 +2,9 @@ name: Ansible runner via Github Action
 run-name: ${{ github.actor }} is starting the Ansible Runner 🚀
 on: [push]
 jobs:
-  Update-Node:
+  Ansible-Run:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - run: npm install
-      - run: npm ci --force
       - run: sudo apt update
       - run: sudo apt install software-properties-common
       - run: sudo add-apt-repository --yes --update ppa:ansible/ansible
