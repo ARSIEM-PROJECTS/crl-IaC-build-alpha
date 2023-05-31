@@ -14,11 +14,11 @@ jobs:
       - run: npm install
       - run: npm ci --force
       - name: apt update
-        uses: sudo apt update
+      - run: sudo apt update
       - name: software-properties-common install
-        uses: sudo apt install software-properties-common
+      - run: sudo apt install software-properties-common
       - name: PPA repo add 
-        uses: sudo add-apt-repository --yes --update ppa:ansible/Ansible
+      - run: sudo add-apt-repository --yes --update ppa:ansible/Ansible
       - name: ansible install
-        uses: sudo apt install ansible
+      - run: sudo apt install ansible
 
