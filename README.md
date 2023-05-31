@@ -1,2 +1,3 @@
-# crl-IaC-build-alpha
-First attempt to use Terraform to use IaC to build full cyber range from scratch
+# crl-IaC-build-alpha project
+
+Developing IaC method to automate the creation of linux containers when needed for range utilizing Github Actions. 
