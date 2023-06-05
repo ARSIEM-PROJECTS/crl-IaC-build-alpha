@@ -31,10 +31,24 @@ az group delete --name exampleGroup
 ### AKS Cluster
 * [Kubernetes Cluster Intro](https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/)
 
+Create a cluster
+
 ```bash
 az aks create -g AKSResourceGroup -n myAKSCluster --enable-managed-identity --node-count 1 --enable-addons monitoring --enable-msi-auth-for-monitoring  --generate-ssh-keys
 
 ```
+#### Stopping and Starting Kubernetes Cluster with az cli
+
+```bash
+
+az aks stop --name myAKSCluster --resource-group AKSResourceGroup
+```
+
+```bash
+ az aks show --name myAKSCluster --resource-group AKSResourceGroup | grep powerState -A 2
+```
+
+
 
 ### Install kubectl for managing Kubernetes
 
